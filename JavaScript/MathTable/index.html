@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        
+        button{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Multiplication Table</h1>
+    <input type="number" name="" id="input" placeholder="number"> <br> <br> 
+    <input type="number" name="" id="length" placeholder="length"> <br> <br>
+    <button onclick="showTable()">Show Table</button>
+
+    
+    <table border = "1px">
+        <thead>
+            <tr>
+                <td>Multiplication</td>
+                <td>Result</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <script>
+        function showTable() {
+            const input = document.querySelector("#input").value;
+            const length = Number(document.querySelector("#length").value);
+            const tbody = document.querySelector("#tbody");
+
+            for (let i = 1; i < length + 1; i++) {
+                let result = input * i;
+                const tableRow = document.createElement("tr");
+                tableRow.innerHTML = `
+                <td>${input}x ${i} = </td>
+                <td>${result}</td>
+                `
+                tbody.appendChild(tableRow)
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
