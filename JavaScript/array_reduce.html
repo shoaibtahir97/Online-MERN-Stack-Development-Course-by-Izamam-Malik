@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Looping through array using Reduce</h1>
+
+    <script>
+        // Array Reduce Method
+
+        /*
+        The array reduce method is used to perform a function on each element of
+        array and reduce the length of array to one. For example, it adds all the 
+        elements and provides a sum of all the values or multiplication or average.
+        It is similar to map, takes two parameters first is the function and second 
+        is the number. The number is the previousValue. The function takes two 
+        parameters first the previousValue (the value after comma). 
+        
+        of the current value and second
+        is the value of that index. The value changes after every 
+        loop 
+
+
+        */
+        let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        let arr2 = arr1.reduce((previousValue, currentValue) => {
+            return previousValue + currentValue;
+        }, 10)
+
+        console.log(arr2);
+
+    </script>
+</body>
+
+</html>
